@@ -2,9 +2,18 @@ from tkinter import *
 import tkinter as tk
 from pytube import YouTube
 
-root = Tk()
+class downloader():
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Media Downloader")
 
-myLabel = Label(root, text="Hello World!")
-myLabel.pack()
+        frame = Frame(self.root, bd=10, width=1000, height=100, relief=RIDGE)
 
-root.mainloop()
+
+        b = Button(frame, text="Download")
+        b.grid(row=1, column=1)
+
+if __name__ == '__main__':
+    root = tk.Tk()
+    application = downloader(root)
+    root.mainloop()
