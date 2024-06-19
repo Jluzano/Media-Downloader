@@ -1,5 +1,10 @@
 from tkinter import *
+import tkinter as tk
 from pytube import YouTube
 
-def youtubeDownloader():
-    print("ok")
+root = Tk()
+
+myLabel = Label(root, text="Hello World!")
+myLabel.pack()
+
+root.mainloop()
