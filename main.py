@@ -28,10 +28,11 @@ def startDownload(link, status):
             ytLink = link.get()
             ytObject = YouTube(ytLink)
             video = ytObject.streams.get_highest_resolution()
-            video.download('~/Downloads')
+            video.download()
             status.config(text="Status: Download completed!")
         except:
-            print("The YouTube link is invalid")
+            status.config(text="Invalid YouTube link")
+            root.after(3000, lambda: status.config(text="Status: N/A"))
         root.after(3000, lambda: status.config(text="Status: N/A"))
     return download
 
