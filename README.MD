@@ -1,1 +1,1 @@
-Program that downloads provided YouTube, Twitter (WIP), and Instagram (WIP) images/videos.
+Program that downloads provided YouTube videos.

@@ -5,30 +5,22 @@ from pytube import YouTube
 class MediaDownloader:
     def __init__(self, root):
         self.root = root
-        self.root.title("Media Downloader")
-        self.root.geometry("600x400+500+300")
+        self.root.title("YouTube Downloader")
+        self.root.geometry("500x150+500+300")
 
         # Status message
         status = Label(root, text="Status: N/A", font=('Arial', 16), fg='blue')
         status.grid(row=7, column=0, padx=10, pady=10)
 
         # Text fields
-        self.text_field("YouTube", 1)
-        self.text_field("Twitter", 3)
-        self.text_field("Instagram", 5)
+        self.text_field("Insert link below:", 1)
 
         #Entry fields to place links
         youtubeLink = Entry(root, width=50)
         youtubeLink.grid(row=2, column=0, padx=10)
-        twitterLink = Entry(root, width=50)
-        twitterLink.grid(row=4, column=0, padx=10)
-        instagramLink = Entry(root, width=50)
-        instagramLink.grid(row=6, column=0, padx=10)
 
         # Initializing download buttons
         self.button(2, self.startDownload(youtubeLink, status))
-        self.button(4, self.startDownload(None, status))
-        self.button(6, self.startDownload(None, status))
 
     # text field method
     def text_field(self, textName, rowNum):
