@@ -1,6 +1,5 @@
 #Importing modules
 from tkinter import *
-import time
 from pytube import YouTube
 
 # Initializing UI
